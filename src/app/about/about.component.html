@@ -1,0 +1,157 @@
+<section>
+  <app-backbutton></app-backbutton>
+  <div class="about-container">
+    <div>
+      <h1 class="title">
+        <span class="first-span">ABOUT</span><span class="span-theme">ME</span>
+      </h1>
+      <div class="line-section">
+        <span class="line span-theme"></span>
+        <div class="line-text">
+          I DESIGN AND CODE BEAUTIFUL THINGS, AND I LOVE WHAT I DO
+        </div>
+        <span class="line span-theme"></span>
+      </div>
+    </div>
+    <div class="bio-section">
+      <!-- IMAGE -->
+      <div class="profile-wrapper">
+        <div class="upper-border {{ storedTheme }} "></div>
+        <img
+          src="../../assets/images/profile.png"
+          alt="my profile image"
+          class="profile"
+        />
+        <div class="bottom-border {{ storedTheme }}"></div>
+      </div>
+      <!-- BIO -->
+      <div class="bio">
+        <div>
+          <p class="title-p">
+            First Name <span class="title-span">Damilola</span>
+          </p>
+          <p class="title-p">
+            Last Name <span class="title-span">Aladeokin</span>
+          </p>
+          <p class="title-p">
+            Birth Date <span class="title-span">12 November 1996</span>
+          </p>
+          <p class="title-p">
+            Nationality <span class="title-span">Nigerian</span>
+          </p>
+          <p class="title-p">
+            Experience <span class="title-span">2 years</span>
+          </p>
+        </div>
+        <div>
+          <p class="title-p">Address <span class="title-span">London</span></p>
+          <p class="title-p">
+            Languages <span class="title-span">English</span>
+          </p>
+          <p class="title-p">
+            Email<span class="title-span">tiannah1989@gmail.com</span>
+          </p>
+          <p class="title-p">
+            Phone <span class="title-span">+44 7780395898</span>
+          </p>
+          <p class="title-p">
+            Freelance <span class="title-span">Available</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edu-exp">
+    <div class="experience">
+      <h2>EXPERIENCE</h2>
+      <ul class="bar {{ storedTheme }}">
+        <li *ngFor="let exp of experience">
+          <div class="duration">
+            <mat-icon>calendar_today</mat-icon> <span>{{ exp.year }}</span>
+          </div>
+          <div>
+            <p>
+              {{ exp.title }}<span class="place"> - {{ exp.place }}</span>
+            </p>
+          </div>
+          <div class="desc">
+            <p>{{ exp.desc1 }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="education">
+      <h2>EDUCATION</h2>
+      <ul class="bar {{ storedTheme }}">
+        <li *ngFor="let edu of education">
+          <div class="duration">
+            <mat-icon>calendar_today</mat-icon> <span>{{ edu.year }}</span>
+          </div>
+          <div>
+            <p>
+              {{ edu.course }}<span class="place"> - {{ edu.place }}</span>
+            </p>
+          </div>
+          <div class="desc">
+            <p>{{ edu.desc }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="skills">
+    <h2>SKILLS</h2>
+    <div class="skill-wrapper">
+      <div class="skill-box">
+        <span class="title">HTML</span>
+        <div class="skill-bar">
+          <span class="skill-per" style="width: 80%">
+            <span class="tooltip">80%</span>
+          </span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <span class="title">CSS</span>
+        <div class="skill-bar">
+          <span class="skill-per" style="width: 70%">
+            <span class="tooltip">70%</span>
+          </span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <span class="title">JAVASCRIPT</span>
+        <div class="skill-bar">
+          <span class="skill-per" style="width: 50%">
+            <span class="tooltip">50%</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <span class="title">TYPESCRIPT</span>
+        <div class="skill-bar">
+          <span class="skill-per" style="width: 50%">
+            <span class="tooltip">50%</span>
+          </span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <span class="title">ANGULAR JS</span>
+        <div class="skill-bar">
+          <span class="skill-per" style="width: 30%">
+            <span class="tooltip">30%</span>
+          </span>
+        </div>
+      </div>
+      <div class="skill-box">
+        <span class="title">REACT JS/NEXT JS</span>
+        <div class="skill-bar">
+          <span class="skill-per" style="width: 90%">
+            <span class="tooltip">90%</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

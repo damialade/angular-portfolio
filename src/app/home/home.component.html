@@ -1,0 +1,37 @@
+<app-backbutton></app-backbutton>
+<div class="home-container">
+  <div>
+    <img
+      src="../../assets/images/profile.png"
+      alt="my profile image"
+      class="profile"
+    />
+  </div>
+  <div class="text content {{ storedTheme }}">
+    <p class="p-theme">HI THERE !</p>
+    <div class="home-wrapper">
+      <div class="static-txt">I'm</div>
+      <ul class="dynamic-txts" role="main">
+        <li><span class="span-theme">DAMILOLA</span></li>
+        <li><span class="span-theme">A DEVELOPER</span></li>
+        <li><span class="span-theme">A DESIGNER</span></li>
+        <li><span class="span-theme">A FREELANCER</span></li>
+      </ul>
+    </div>
+    <div class="small-text">
+      I'm a Frontend Developer based in London, England. I strive to build
+      immersive and beautiful web applications through carefully crafted code
+      and user-centric design.
+    </div>
+    <div class="btn-wrapper">
+      <div class="btn-round" routerLink="/about">
+        <mat-icon>person</mat-icon>
+        <span class="span-theme"> About Me</span>
+      </div>
+      <div class="btn-round2" routerLink="/portfolio">
+        <mat-icon>work</mat-icon>
+        <span class="span-theme">Portfolio</span>
+      </div>
+    </div>
+  </div>
+</div>

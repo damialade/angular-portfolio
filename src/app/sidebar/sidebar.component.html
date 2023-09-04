@@ -1,0 +1,48 @@
+<div>
+  <div class="menutrigger content {{ storedTheme }}" (click)="toggle()">
+    <mat-icon *ngIf="!show">menu</mat-icon>
+    <mat-icon *ngIf="show">close</mat-icon>
+  </div>
+  <div class="wrapper-nav">
+    <!-- NavBar -->
+    <div class="sideNav" *ngIf="show">
+      <div>
+        <a
+          [routerLink]="['/home']"
+          class="menu"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <div class="content {{ storedTheme }} smallIcon">
+            <mat-icon>home</mat-icon>
+          </div>
+          <span>Home</span>
+        </a>
+      </div>
+      <div>
+        <a [routerLink]="['/about']" class="menu" routerLinkActive="active">
+          <div class="content {{ storedTheme }} smallIcon">
+            <mat-icon>person</mat-icon>
+          </div>
+          <span>About</span>
+        </a>
+      </div>
+      <div>
+        <a [routerLink]="['/portfolio']" class="menu" routerLinkActive="active">
+          <div class="content {{ storedTheme }}">
+            <mat-icon>work</mat-icon>
+          </div>
+          <span>Portfolio</span>
+        </a>
+      </div>
+      <div>
+        <a [routerLink]="['/contact']" class="menu" routerLinkActive="active">
+          <div class="content {{ storedTheme }}">
+            <mat-icon> contacts</mat-icon>
+          </div>
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

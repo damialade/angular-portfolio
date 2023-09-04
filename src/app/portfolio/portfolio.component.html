@@ -1,0 +1,81 @@
+<section>
+  <app-backbutton></app-backbutton>
+  <div class="portfolio-container">
+    <div>
+      <h1 class="title">
+        <span class="first-span">MY</span
+        ><span class="span-theme">PORTFOLIO</span>
+      </h1>
+      <div class="line-section">
+        <span class="line span-theme"></span>
+        <div class="line-text">
+          A FEW RECENT CODING PROJECTS. WANT TO SEE MORE? EMAIL ME.
+        </div>
+        <span class="line span-theme"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-wrapper">
+    <!-- Work -->
+    <section id="casestudies" class="casestudies">
+      <article
+        class="content"
+        *ngFor="let port of portfolio; let i = index"
+        (click)="setPortfolio(port)"
+      >
+        <div class="content-overlay"></div>
+        <img
+          class="content-image"
+          src="{{ port.imageUrl }}"
+          alt="project-images"
+        />
+        <div class="content-details fadeIn-bottom">
+          <p class="content-text">{{ port.textOverlay }}</p>
+        </div>
+      </article>
+    </section>
+  </div>
+</section>
+<app-dialog [(visible)]="showDialog">
+  <div *ngIf="selectedPortfolio" class="detail-wrapper">
+    <img
+      class="detail-image"
+      src="{{ selectedPortfolio.imageUrl }}"
+      alt="project-image"
+    />
+    <div class="title-close">
+      <p class="title-p">{{ selectedPortfolio.textOverlay }}</p>
+      <div (click)="showDialog = !showDialog" class="btn">
+        <i class="fa fa-close"></i>Close
+      </div>
+    </div>
+    <div class="detail-section">
+      <div>
+        <p class="sub-section">
+          <i class="fa fa-file-text"></i> <span>Project :</span>
+          {{ selectedPortfolio.project }}
+        </p>
+      </div>
+      <div>
+        <p class="sub-section">
+          <i class="fa fa-user"></i> <span>Client :</span>
+          {{ selectedPortfolio.client }}
+        </p>
+      </div>
+      <div>
+        <p class="sub-section">
+          <i class="fa fa-hourglass"></i> <span>Duration :</span>
+          {{ selectedPortfolio.duration }}
+        </p>
+      </div>
+      <div>
+        <p class="sub-section">
+          <i class="fa fa-code"></i><span>Technologies :</span>
+          {{ selectedPortfolio.technologies }}
+        </p>
+      </div>
+    </div>
+    <div class="btn prev"><i class="fa fa-external-link"></i>Preview</div>
+  </div>
+</app-dialog>

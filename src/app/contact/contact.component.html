@@ -1,0 +1,96 @@
+<section>
+  <app-backbutton></app-backbutton>
+  <div class="contact-container">
+    <div>
+      <h1 class="title">
+        <span class="first-span">GET</span
+        ><span class="span-theme">IN TOUCH</span>
+      </h1>
+      <div class="line-section">
+        <span class="line span-theme"></span>
+        <div class="line-text">
+          I’M ALWAYS OPEN TO DISCUSSING PRODUCT DEVELOPMENT WORK OR
+          PARTNERSHIPS.
+        </div>
+        <span class="line span-theme"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div class="social-media">
+      <div class="media-section">
+        <p>Phone</p>
+        <div class="info">
+          <mat-icon>phone</mat-icon>
+          <span>+44 7780395898</span>
+        </div>
+      </div>
+      <div class="media-section">
+        <p>Email</p>
+        <div class="info">
+          <mat-icon>mail</mat-icon>
+          <span>tiannah1989@gmail.com</span>
+        </div>
+      </div>
+      <div class="media-section">
+        <p>Social Profiles</p>
+        <div class="info">
+          <a target="_blank" href="https://github.com/DamiFusion"
+            ><i class="fa-brands fab fa-github"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/ti_annah/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/damilola-aladeokin"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <form class="input-form" (submit)="sendEmail($event)">
+      <div class="input text">
+        <p>
+          If you have any suggestion, project or even you want to say Hello..
+          please fill out the form below and I will reply you shortly.
+        </p>
+      </div>
+      <section class="col right">
+        <!--  *******   Form Starts   *******  -->
+
+        <form class="messageForm" (submit)="sendEmail($event)">
+          <div class="inputGroup halfWidth">
+            <input type="text" name="user_name" required="required" />
+            <label>Your Name</label>
+          </div>
+
+          <div class="inputGroup halfWidth">
+            <input type="text" name="user_email" required="required" />
+            <label>Email</label>
+          </div>
+
+          <div class="inputGroup fullWidth">
+            <input type="text" name="subject" required="required" />
+            <label>Subject</label>
+          </div>
+
+          <div class="inputGroup fullWidth">
+            <textarea required="required" name="message"></textarea>
+            <label>Say Something</label>
+          </div>
+
+          <div class="inputGroup fullWidth">
+            <p *ngIf="sendMessage" class="sendMsg">
+              Thank you... Will reply ASAP
+            </p>
+            <button type="submit" value="Send">Send Message</button>
+          </div>
+        </form>
+
+        <!--  *******   Form Ends   *******  -->
+      </section>
+    </form>
+  </div>
+</section>

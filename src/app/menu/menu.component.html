@@ -1,0 +1,39 @@
+<!-- <app-backbutton class="content {{ storedTheme }}"></app-backbutton> -->
+<div class="grid-container">
+  <div class="grid-class">
+    <a [routerLink]="['/home']" routerLinkActive="active">
+      <div class="content {{ storedTheme }}">
+        <mat-icon>home</mat-icon>
+      </div>
+      <p>HOME</p>
+    </a>
+  </div>
+  <div class="grid-class">
+    <a [routerLink]="['/about']" routerLinkActive="active">
+      <div class="content {{ storedTheme }}">
+        <mat-icon>person</mat-icon>
+      </div>
+      <p>ABOUT ME</p>
+    </a>
+  </div>
+  <div class="grid-class">
+    <a [routerLink]="['/portfolio']" routerLinkActive="active">
+      <div class="content {{ storedTheme }}">
+        <mat-icon>work</mat-icon>
+      </div>
+      <p>PORTFOLIO</p>
+    </a>
+  </div>
+  <div class="grid-class">
+    <a [routerLink]="['/contact']" routerLinkActive="active">
+      <div class="content {{ storedTheme }}">
+        <mat-icon> contacts</mat-icon>
+      </div>
+      <p>CONTACT</p>
+    </a>
+  </div>
+  <!-- <div class="grid-class">
+    <div><mat-icon> local_post_office</mat-icon></div>
+    <p>BLOG</p>
+  </div> -->
+</div>

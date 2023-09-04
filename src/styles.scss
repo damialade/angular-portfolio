@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  overflow: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  max-width: 100vw;
+  background-color: #252424;
+  overflow: auto;
+}
+
+.content {
+  position: relative;
+}
+
+.theme-options {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  div {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin: 5px 10px;
+    border: 2px solid #fff;
+    display: block;
+    justify-content: center;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  #theme-white {
+    background-color: #fff;
+  }
+
+  #theme-blue {
+    background-color: #3e30fb;
+  }
+  #theme-red {
+    background-color: #ff5d56;
+  }
+  #theme-orange {
+    background-color: #ea9b1c;
+  }
+  #theme-green {
+    background-color: #1ad594;
+  }
+  #theme-purple {
+    background-color: #de3dbb;
+  }
+  #theme-black {
+    background-color: #484747;
+  }
+}
+
+.content.theme-white {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts li {
+    color: #fff;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #fff;
+  }
+  .bar {
+    &:before {
+      background: #fff;
+    }
+    li {
+      &:before {
+        background: #fff;
+      }
+    }
+  }
+
+  .skill-per {
+    background: #fff;
+    .tooltip {
+      background: #fff;
+      color: #333;
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #fff;
+  }
+  .content-overlay {
+    background: rgb(255, 255, 255, 0.7);
+  }
+  .btn {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  .dialog {
+    background-color: #959295;
+  }
+}
+
+.content.theme-blue {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts li {
+    color: #2196f3;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #2196f3;
+  }
+  .bar {
+    &:before {
+      background: #2196f3;
+    }
+    li {
+      &:before {
+        background: #2196f3;
+      }
+    }
+  }
+  .skill-per {
+    background: #2196f3;
+    .tooltip {
+      background: #2196f3;
+      color: #fff;
+      &:before {
+        background-color: #2196f3;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #2196f3;
+  }
+  .content-overlay {
+    background: rgb(33, 150, 243, 0.7);
+  }
+  .btn {
+    border: 1px solid #2196f3;
+    color: #2196f3;
+  }
+}
+
+.content.theme-red {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts li {
+    color: #b53620;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #b53620;
+  }
+  .bar {
+    &:before {
+      background: #b53620;
+    }
+    li {
+      &:before {
+        background: #b53620;
+      }
+    }
+  }
+  .skill-per {
+    background: #b53620;
+    .tooltip {
+      background: #b53620;
+      color: #fff;
+      &:before {
+        background-color: #b53620;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #b53620;
+  }
+  .content-overlay {
+    background: rgb(181, 54, 32, 0.7);
+  }
+
+  .btn {
+    border: 1px solid #b53620;
+    color: #b53620;
+  }
+}
+
+.content.theme-orange {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts {
+    color: #bd7510;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #bd7510;
+  }
+  .bar {
+    &:before {
+      background: #bd7510;
+    }
+    li {
+      &:before {
+        background: #bd7510;
+      }
+    }
+  }
+  .skill-per {
+    background: #bd7510;
+    .tooltip {
+      background: #bd7510;
+      color: #fff;
+      &:before {
+        background-color: #bd7510;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #bd7510;
+  }
+  .content-overlay {
+    background: rgb(189, 117, 16, 0.7);
+  }
+  .btn {
+    border: 1px solid #bd7510;
+    color: #bd7510;
+  }
+}
+
+.content.theme-green {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts {
+    color: #3f7e23;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #3f7e23;
+  }
+  .bar {
+    &:before {
+      background: #3f7e23;
+    }
+    li {
+      &:before {
+        background: #3f7e23;
+      }
+    }
+  }
+  .skill-per {
+    background: #3f7e23;
+    .tooltip {
+      background: #3f7e23;
+      color: #fff;
+      &:before {
+        background-color: #3f7e23;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #3f7e23;
+  }
+  .content-overlay {
+    background: rgb(63, 126, 35, 0.7);
+  }
+  .btn {
+    border: 1px solid #3f7e23;
+    color: #3f7e23;
+  }
+}
+
+.content.theme-purple {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts {
+    color: #a81288;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #a81288;
+  }
+
+  .bar {
+    &:before {
+      background: #a81288;
+    }
+    li {
+      &:before {
+        background: #a81288;
+      }
+    }
+  }
+  .skill-per {
+    background: #a81288;
+    .tooltip {
+      background: #a81288;
+      color: #fff;
+      &:before {
+        background-color: #a81288;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #a81288;
+  }
+  .content-overlay {
+    background: rgb(168, 18, 136, 0.7);
+  }
+  .btn {
+    border: 1px solid #a81288;
+    color: #a81288;
+  }
+}
+
+.content.theme-black {
+  .title-p,
+  .fa,
+  .fa-brands,
+  mat-icon,
+  .span-theme,
+  .p-theme,
+  .dynamic-txts {
+    color: #959295;
+  }
+  .upper-border::after,
+  .upper-border::before,
+  .bottom-border::after,
+  .bottom-border::before {
+    background-color: #959295;
+  }
+  .bar {
+    &:before {
+      background: #959295;
+    }
+    li {
+      &:before {
+        background: #959295;
+      }
+    }
+  }
+  .skill-per {
+    background: #959295;
+    .tooltip {
+      background: #959295;
+      color: #fff;
+      &:before {
+        background-color: #959295;
+      }
+    }
+  }
+  textarea::-webkit-scrollbar-thumb,
+  button {
+    background-color: #959595;
+  }
+  .content-overlay {
+    background: rgb(149, 149, 149, 0.7);
+  }
+  .btn {
+    border: 1px solid #959295;
+    color: #959295;
+  }
+}
