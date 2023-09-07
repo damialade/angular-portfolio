@@ -159,6 +159,9 @@ section {
     margin: auto;
     height: 50vh;
     border-radius: 20px;
+    @media screen and (max-width: 600px) {
+      margin-left: 5px;
+    }
   }
 
   .detail-section {
@@ -226,7 +229,7 @@ section {
   @media screen and (max-width: 600px) {
     width: 27%;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 375px) {
     width: 35%;
   }
 }
