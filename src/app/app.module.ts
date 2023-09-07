@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { BackbuttonComponent } from './backbutton/backbutton.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     DialogComponent,
     BackbuttonComponent,
     LandingpageComponent,
+    PagenotFoundComponent,
   ],
   imports: [
     BrowserModule,
