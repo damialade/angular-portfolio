@@ -35,6 +35,9 @@ main {
   overflow-y: auto;
   opacity: 0;
   animation: fadeInText 2s ease forwards 3s;
+  // @media screen and (max-width: 1024px) {
+  //   padding-bottom: 250rem;
+  // }
 }
 .settings-container {
   position: fixed;

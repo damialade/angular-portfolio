@@ -1,83 +1,77 @@
 <div>
   <!-- Welcome Slider -->
-  <div class="intro"><h2 class="welcome">Welcome</h2></div>
-  <main>
-    <div class="wrapper">
-      <!-- Navigation for larger screens -->
-      <div>
-        <app-sidebar
-          *ngIf="showMenuX"
-          [storedTheme]="storedTheme"
-        ></app-sidebar>
+  <!-- <div class="intro"><h2 class="welcome">Welcome</h2></div>
+  <main> -->
+  <div class="wrapper">
+    <!-- Navigation for larger screens -->
+    <div>
+      <app-sidebar *ngIf="showMenuX" [storedTheme]="storedTheme"></app-sidebar>
+    </div>
+
+    <!-- Routes -->
+    <div
+      class="content {{ storedTheme }}"
+      [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
+    >
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+
+    <div
+      class="content {{ storedTheme }}"
+      role="main"
+      [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
+    >
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+
+    <!-- Style Switcher -->
+    <div class="settings-container">
+      <div class="settings content {{ storedTheme }}" (click)="styleSwitcher()">
+        <mat-icon>settings</mat-icon>
       </div>
 
-      <!-- Routes -->
-      <div
-        class="content {{ storedTheme }}"
-        [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
-      >
-        <router-outlet #outlet="outlet"></router-outlet>
-      </div>
-
-      <div
-        class="content {{ storedTheme }}"
-        role="main"
-        [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
-      >
-        <router-outlet #outlet="outlet"></router-outlet>
-      </div>
-
-      <!-- Style Switcher -->
-      <div class="settings-container">
-        <div
-          class="settings content {{ storedTheme }}"
-          (click)="styleSwitcher()"
-        >
-          <mat-icon>settings</mat-icon>
-        </div>
-
-        <div *ngIf="showStyle">
-          <div class="content {{ storedTheme }}" role="main">
-            <div class="theme-options">
-              <div
-                id="theme-white"
-                [ngClass]="storedTheme === 'theme-white' ? 'active' : ''"
-                (click)="setTheme('theme-white')"
-              ></div>
-              <div
-                id="theme-red"
-                [ngClass]="storedTheme === 'theme-red' ? 'active' : ''"
-                (click)="setTheme('theme-red')"
-              ></div>
-              <div
-                id="theme-blue"
-                [ngClass]="storedTheme === 'theme-blue' ? 'active' : ''"
-                (click)="setTheme('theme-blue')"
-              ></div>
-              <div
-                id="theme-orange"
-                [ngClass]="storedTheme === 'theme-orange' ? 'active' : ''"
-                (click)="setTheme('theme-orange')"
-              ></div>
-              <div
-                id="theme-purple"
-                [ngClass]="storedTheme === 'theme-purple' ? 'active' : ''"
-                (click)="setTheme('theme-purple')"
-              ></div>
-              <div
-                id="theme-green"
-                [ngClass]="storedTheme === 'theme-green' ? 'active' : ''"
-                (click)="setTheme('theme-green')"
-              ></div>
-              <div
-                id="theme-black"
-                [ngClass]="storedTheme === 'theme-black' ? 'active' : ''"
-                (click)="setTheme('theme-black')"
-              ></div>
-            </div>
+      <div *ngIf="showStyle">
+        <div class="content {{ storedTheme }}" role="main">
+          <div class="theme-options">
+            <div
+              id="theme-white"
+              [ngClass]="storedTheme === 'theme-white' ? 'active' : ''"
+              (click)="setTheme('theme-white')"
+            ></div>
+            <div
+              id="theme-red"
+              [ngClass]="storedTheme === 'theme-red' ? 'active' : ''"
+              (click)="setTheme('theme-red')"
+            ></div>
+            <div
+              id="theme-blue"
+              [ngClass]="storedTheme === 'theme-blue' ? 'active' : ''"
+              (click)="setTheme('theme-blue')"
+            ></div>
+            <div
+              id="theme-orange"
+              [ngClass]="storedTheme === 'theme-orange' ? 'active' : ''"
+              (click)="setTheme('theme-orange')"
+            ></div>
+            <div
+              id="theme-purple"
+              [ngClass]="storedTheme === 'theme-purple' ? 'active' : ''"
+              (click)="setTheme('theme-purple')"
+            ></div>
+            <div
+              id="theme-green"
+              [ngClass]="storedTheme === 'theme-green' ? 'active' : ''"
+              (click)="setTheme('theme-green')"
+            ></div>
+            <div
+              id="theme-black"
+              [ngClass]="storedTheme === 'theme-black' ? 'active' : ''"
+              (click)="setTheme('theme-black')"
+            ></div>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+  <!-- </main> -->
 </div>
